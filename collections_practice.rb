@@ -14,3 +14,10 @@ end
 def remove_non_strings(array)
   array.select {|word| word.class == String}
 end
+
+def count_elements(array)
+  array.uniq.collect do |word|
+    word[:count]=array.count(word)
+    word
+  end
+end
